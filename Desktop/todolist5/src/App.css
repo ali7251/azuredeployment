@@ -1,0 +1,132 @@
+/* Global Styles */
+body {
+  background: linear-gradient(135deg, #667eea, #764ba2); /* Dégradé d'arrière-plan */
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.app-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.todo-box {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Ombre autour de la boîte */
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex; /* Ajoute un layout flex pour organiser en ligne */
+  justify-content: space-between; /* Espace égal entre les éléments */
+  align-items: center; /* Aligne verticalement au centre */
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 35%; /* Ajustez la largeur pour donner de la place au bouton */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 10px; /* Ajoute un espace entre le champ et le bouton */
+}
+
+.btn-add {
+  background-color: #ff6347 !important; /* Forcer la couleur orange */
+  color: white !important;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px; /* Style arrondi */
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  flex-shrink: 0; /* Empêcher le bouton de rétrécir */
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.btn-add:hover {
+  background-color: #ff4500 !important; /* Forcer la couleur plus foncée au survol */
+}
+
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  background-color: #f9f9f9; /* Couleur de fond des tâches */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère sur chaque tâche */
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.task-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; /* Cercle pour chaque tâche */
+  border: 2px solid #333;
+  margin-right: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.checked-circle {
+  background-color: #ff6347; /* Cercle rempli quand la tâche est complétée */
+  color: white; /* Couleur de l'icône de check */
+}
+
+.task-item.completed .task-text, .task-item.completed .task-desc {
+  text-decoration: line-through; /* Barre le texte lorsqu'il est complété */
+  color: #999;
+}
+
+.task-text {
+  font-size: 18px;
+}
+
+.task-desc {
+  font-size: 14px;
+  color: #666;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.btn-delete:hover {
+  color: darkred;
+}
